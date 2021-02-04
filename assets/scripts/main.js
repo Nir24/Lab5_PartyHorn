@@ -1,15 +1,13 @@
 // main.js
 let ButtonSound = document.getElementById("honk-btn");
-ButtonSound.addEventListener("click",Play);
-
-function Play(){
+ButtonSound.addEventListener("click",function(event){
+    event.preventDefault();
     if(NumFeild.value != 0 ){
         console.log("hi");
         let audioSound = document.getElementById("horn-sound");
         audioSound.play();
     }
-    setTimeout(console.log("done"),100000);
-}
+});
 
 // JS for visual audio adjustment
 let NumFeild = document.getElementById("volume-number");
